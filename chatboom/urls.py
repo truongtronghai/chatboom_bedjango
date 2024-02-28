@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("chat/", include("chat.urls")),
+    path("", include("chat.urls")),
     path("admin/", admin.site.urls),
+    # urls for oauth_toolkit services
+    path("o/", include("oauth2_provider.urls", namespace="oauth2_provider")),
 ]
