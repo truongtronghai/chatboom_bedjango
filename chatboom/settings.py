@@ -148,3 +148,5 @@ REST_FRAMEWORK = {
 }
 
 LOGIN_URL = "/admin/login/"
+
+AUTH_USER_MODEL = 'chat.User'
