@@ -13,6 +13,9 @@ class Room(models.Model):
     def __str__(self):
         return f"Room({self.name} {self.host})"
     
+    class Meta:
+        db_table = 'room'
+    
 class Message(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name="messages")
     text = models.TextField(max_length=500)
@@ -21,3 +24,6 @@ class Message(models.Model):
 
     def __str__(self):
         return f"Message({self.user} {self.room})"
+    
+    class Meta:
+        db_table = 'message'

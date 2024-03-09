@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "rest_framework",
     # local
     "chat",
+    "channels"
 ]
 
 MIDDLEWARE = [
@@ -84,7 +85,7 @@ ASGI_APPLICATION = "chatboom.asgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / "chatboom_db.sqlite3",
     }
 }
 
