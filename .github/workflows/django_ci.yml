@@ -32,7 +32,7 @@ jobs:
 
       - name: Check import sorting with isort
         run: |
-          isort --check .
+          isort --check --profile black .
 
       - name: Check for unused imports and variables with autoflake
         run: |
